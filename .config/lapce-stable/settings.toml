@@ -1,0 +1,22 @@
+
+[core]
+modal = true
+color-theme = "Rosé Pine Moon"
+custom-titlebar = true
+
+[ui]
+font-family = "Noto sans"
+header-height = 35
+status-height = 25
+list-line-height = 25
+
+[editor]
+font-family = "FiraCode Nerd Font"
+autosave-interval = 1000
+render-whitespace = "all"
+enable-completion-lens = true
+format-on-save = true
+atomic-soft-tabs = true
+
+[terminal]
+font-family = "FiraCode Nerd Font"

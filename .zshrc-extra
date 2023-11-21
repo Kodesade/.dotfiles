@@ -1,0 +1,24 @@
+alias ys='yay --color=auto -S'
+alias ls='exa -l --icons -a -s name -r -g -h -m --time-style long-iso -@'
+alias setmyown='sudo chown -v -R $USER:$USER'
+export TERM="xterm-kitty"
+alias ssh="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+
+cd(){
+        if [[ "$#" == "0" ]]
+        then
+                builtin cd $HOME
+                return 0
+        fi
+
+        _P=$(realpath $1)
+        
+        if [[ "$_P" != "$HOME" ]]
+        then
+                rm -rf "$HOME/.lastdir"
+                ln -sf "$_P" "$HOME/.lastdir"
+        fi
+
+        builtin cd "$_P"
+}
+
